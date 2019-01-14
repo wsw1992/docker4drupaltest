@@ -1,4 +1,3 @@
-su - root <<EOF
 #!/bin/bash
 
 set -eo pipefail
@@ -14,4 +13,3 @@ docker run --rm \
     -v "$HOME/.composer":/composer \
     -v "$PWD":/app \
     composer/composer:alpine update -n
-EOF
