@@ -6,7 +6,7 @@ set -eo pipefail
 docker run --rm \
     -v "$HOME/.composer":/composer \
     -v "$PWD":/app \
-    composer/composer:alpine  -n
+    composer/composer:alpine update -n
 
 # Install all requirements.
 docker run --rm \
