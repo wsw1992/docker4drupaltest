@@ -7,6 +7,7 @@ docker run --rm \
     -v "$HOME/.composer":/composer \
     -v "$PWD":/app \
     composer/composer:alpine 
+docker ps
 
 # Install all requirements.
 #docker run --rm \
