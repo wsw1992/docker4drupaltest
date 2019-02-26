@@ -1,4 +1,9 @@
+#!/bin/bash
 
-whoami
+set -eo pipefail
 
-docker ps -a
+# Install merge plugin.
+docker run --rm \
+    -v "$HOME/.composer":/composer \
+    -v "$PWD":/app \
+    composer/composer:alpine update -n
