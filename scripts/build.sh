@@ -8,7 +8,4 @@ echo "$PWD"
 set -eo pipefail
 
 # Install merge plugin.
-docker run --rm \
-    -v "$HOME/.composer":/composer \
-    -v "$PWD":/app \
-    composer/composer:alpine update -n
+docker run -v "$PWD":/app composer/composer:alpine update -n
